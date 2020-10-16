@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class Standart {
+
+    public static void main(String[] args) throws Exception {
+        Scanner in = new Scanner(System.in);
+        String n_str = in.nextLine();
+        String str = n_str.replace(" ", "");
+        String[] splitStr;
+        if (str.contains("*")) {
+            splitStr = str.split("\\*");
+            int var = Integer.parseInt(splitStr[0]) * Integer.parseInt(splitStr[1]);
+            System.out.println(var);
+        }
+        else if (str.contains("-")) {
+            splitStr = str.split("-");
+            int var = Integer.parseInt(splitStr[0]) - Integer.parseInt(splitStr[1]);
+            System.out.println(var);
+        }
+        else if (str.contains("+")) {
+            splitStr = str.split("\\+");
+            int var = Integer.parseInt(splitStr[0]) + Integer.parseInt(splitStr[1]);
+            System.out.println(var);
+        }
+        else if (str.contains("/")) {
+            splitStr = str.split("/");
+            int var = Integer.parseInt(splitStr[0]) / Integer.parseInt(splitStr[1]);
+            System.out.println(var);
+        }
+
+    }
+}
